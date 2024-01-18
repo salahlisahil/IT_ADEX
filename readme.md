@@ -129,7 +129,7 @@ If you want to contact me, you can reach me over [Twitter](https://www.twitter.c
 
 ### ☑ License
 
-This project is licensed by [MIT](https://choosealicense.com/licenses/mit/) and contain respective license information
+This project is licensed by [MIT](https://choosealicense.com/licenses/mit/) and contains respective license information
 
 
 <br>
