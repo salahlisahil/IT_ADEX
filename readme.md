@@ -6,7 +6,7 @@
 
 <br>
 
-  <a href="https://www.behance.net/gallery/183287761/Pettie-Case-Study-Webdesign"><strong> 📺 Live</strong></a> 
+  <a href="https://aysheulukhan.github.io/a_adex/"><strong> 📺 Live</strong></a> 
 
 </div>
 
