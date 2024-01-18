@@ -142,9 +142,9 @@ The project got prepared by collaborative actions of [Sahil](https://github.com/
 
 <div align="center">
   
-  ![GitHub repo size](https://img.shields.io/github/repo-size/salahlisahil/pettie)
-  ![GitHub stars](https://img.shields.io/github/stars/salahlisahil/pettie?style=social)
-  ![GitHub forks](https://img.shields.io/github/forks/salahlisahil/pettie?style=social)
+  ![GitHub repo size](https://img.shields.io/github/repo-size/salahlisahil/IT_ADEX)
+  ![GitHub stars](https://img.shields.io/github/stars/salahlisahil/IT_ADEX?style=social)
+  ![GitHub forks](https://img.shields.io/github/forks/salahlisahil/IT_ADEX?style=social)
 [![Twitter Follow](https://img.shields.io/twitter/follow/salahlisahil_?style=social)](https://twitter.com/sahil_salahli)
   [![YouTube Video Views](https://img.shields.io/youtube/views/xwXGdpRuSiQ?style=social)](https://youtube.com)
   ![GitHub repo file count (file type)](https://img.shields.io/github/directory-file-count/salahlisahil/IT_ADEX)
