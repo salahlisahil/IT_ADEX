@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {% include 'template/assets.html' %}
+    <!-- CSS link -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Adex</title>
+</head>
+
+<body>
+    <header class="overflow-hidden">
+        {% include 'template/header.html' %}
+    </header>
+
+    <main>
+        <section class="search-section" id="about">
+            <div class="px py-5">
+                <div class="row row-cols-md-1 align-items-center g-5">
+                    <div class="col-xl-6 col-lg-5 payments-content">
+                        <h3 class="fw-medium">01</h3>
+                        <h4 class="fw-semibold py-2">Primary research</h4>
+                        <p>Primary research is research that you collect yourself but going directly to the target
+                            market through a range of methods. Because it is data you create, you own the data set.
+                        </p>
+                        <p>
+                            Two types of results — exploratory information (determines the nature of a problem that
+                            hasn’t yet been clearly defined) and conclusive information (carried out to solve a problem
+                            that exploratory research identified) — from participants are collected as raw data and then
+                            analyzed to gather insights from trends and comparisons.
+                        </p>
+
+                        <p>This method is good for getting the views of a lot of people at one time, especially when
+                            time is short, but it comes with its own management issues. The interviewer must prepare a
+                            way to gather answers and record these, while engaging in conversation with many people.</p>
+
+                    </div>
+                    <div class="col-sm-8 col-lg-7 col-xl-6">
+                        <img src="{{ url_for('static', filename='images/primary.jpg') }}" class="d-block mx-lg-auto img-fluid"
+                            alt="Bootstrap Themes" loading="lazy">
+                    </div>
+
+
+                </div>
+
+                <div class="row row-cols-md-1 align-items-center g-5 flex-xl-row-reverse pt-5">
+                    <div class="col-xl-6 col-lg-5 payments-content ">
+                        <h3 class="fw-medium">02</h3>
+                        <h4 class="fw-semibold py-2">Secondary research</h4>
+                        <p>Secondary research is the use of data that has previously been collected, analysed and published (and therefore you do not own this data). An example of this for market research is:
+                        </p>
+                        <p>
+                            Most information is freely available, so there are less costs associated with this kind of secondary research over primary research methods.
+                        </p>
+
+                        <p>Secondary research can often be the preparation for primary research activities, providing a knowledge base. The information gathered may not provide the specific information to explain the results, which is where primary market research would be used to enhance understanding.</p>
+
+                    </div>
+                    <div class="col-sm-8 col-lg-7 col-xl-6">
+                        <img src="{{ url_for('static', filename='images/secondary.jpg') }}" class="d-block mx-lg-auto img-fluid"
+                            alt="Bootstrap Themes" loading="lazy">
+                    </div>
+
+                </div>
+                <div class="row row-cols-md-1 align-items-center g-5  pt-5">
+                    <div class="col-xl-6 col-lg-5 payments-content ">
+                        <h3 class="fw-medium">03</h3>
+                        <h4 class="fw-semibold py-2">Qualitative research</h4>
+                        <p>Qualitative market research is the collection of primary or secondary data that is non-numerical in nature, and therefore hard to measure.
+                        </p>
+                        <p>
+                            Researchers collect this market research type because it can add more depth to the data.
+                        </p>
+                        <p>This kind of market research is used to summarise and infer, rather than pin-points an exact truth held by a target market. For example, qualitative market research can be done to find out a new target market’s reaction to a new product to translate the reaction into a clear explanation for the company.</p>
+
+                    </div>
+                    <div class="col-sm-8 col-lg-7 col-xl-6">
+                        <img src="{{ url_for('static', filename='images/qualitative.jpeg') }}"
+                            alt="Bootstrap Themes" class="d-block mx-lg-auto img-fluid" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="row row-cols-md-1 align-items-center g-5 flex-xl-row-reverse pt-5">
+                    <div class="col-xl-6 col-lg-5 payments-content ">
+                        <h3 class="fw-medium">04</h3>
+                        <h4 class="fw-semibold py-2">Quantitative research</h4>
+                        <p>Qualitative market research is the collection of primary or secondary data that is non-numerical in nature, and therefore hard to measure.
+                        </p>
+                        <p>
+                            Researchers collect this market research type because it can add more depth to the data.
+                        </p>
+
+                        <p>This kind of market research is used to summarise and infer, rather than pin-points an exact truth held by a target market. For example, qualitative market research can be done to find out a new target market’s reaction to a new product to translate the reaction into a clear explanation for the company.</p>
+
+                    </div>
+                    <div class="col-sm-8 col-lg-7 col-xl-6">
+                        <img src="{{ url_for('static', filename='images/quantitative.webp') }}"
+                            alt="Bootstrap Themes" class="d-block mx-lg-auto img-fluid" loading="lazy">
+                    </div>
+
+                </div>
+
+                <div class="row row-cols-md-1 align-items-center g-5 pt-5">
+                    <div class="col-xl-6 col-lg-5 payments-content ">
+                        <h3 class="fw-medium">05</h3>
+                        <h4 class="fw-semibold py-2">Branding research</h4>
+                        <p>Branding market research assists a company to create, manage and maintain the company brand. This can relate to the tone, branding, images, values or identity of the company.
+                        </p>
+                        <p>
+                            Research can be carried out through interviews, focus groups or surveys. For example, brand awareness surveys will ask your participants whether the brand is known to them and whether it is something they would be interested in buying.
+                        </p>
+
+                        <p>Additional areas for brand research is also around brand loyalty, brand perception, brand positioning, brand value and brand identity .</p>
+
+                    </div>
+                    <div class="col-sm-8 col-lg-7 col-xl-6">
+                        <img src=".{{ url_for('static', filename='images/branding.png') }}"
+                            alt="Bootstrap Themes" class="d-block mx-lg-auto img-fluid" loading="lazy">
+                    </div>
+
+                </div>
+
+                <div class="row row-cols-md-1 align-items-center g-5 flex-xl-row-reverse pt-5">
+                    <div class="col-xl-6 col-lg-5 payments-content ">
+                        <h3 class="fw-medium">06</h3>
+                        <h4 class="fw-semibold py-2">Customer research</h4>
+                        <p>Customer market research looks at the key influences on your target customers and how your company can make changes to encourage sales.
+                        </p>
+                        <p>
+                            Relevant desk research may look at historical purchase records, customer journey mapping, customer segmentation, demographics and persona templates.
+                        </p>
+
+                        <p>Primary research, such as NPS and customer satisfaction surveys, or customer satisfaction interviews at the end of customer support calls, can also give more details.</p>
+
+                    </div>
+                    <div class="col-sm-8 col-lg-7 col-xl-6">
+                        <img src="{{ url_for('static', filename='images/customer.png') }}"
+                            alt="Bootstrap Themes" class="d-block mx-lg-auto img-fluid" loading="lazy">
+                    </div>
+
+                </div>
+
+                <div class="row row-cols-md-1 align-items-center g-5 pt-5">
+                    <div class="col-xl-6 col-lg-5 payments-content ">
+                        <h3 class="fw-medium">07</h3>
+                        <h4 class="fw-semibold py-2">Competitor research</h4>
+                        <p>Competitor market research is about knowing who your competition is and understanding their strengths and weaknesses, in comparison to your organization. It can also be about your competitive offering in the market, or how to approach a new market.
+                        </p>
+                        <p>
+                            The aim of this research is to find ways to make your organization stand out and future planning through horizon scanning and listening to customer preferences.
+                        </p>
+
+                        <p>For example, for competitive analysis, researchers would create a SWOT for your business and your competitors, to see how your business compares.</p>
+
+                    </div>
+                    <div class="col-sm-8 col-lg-7 col-xl-6">
+                        <img src="{{ url_for('static', filename='images/competitor.jpg') }}"
+                            alt="Bootstrap Themes" class="d-block mx-lg-auto img-fluid" loading="lazy">
+                    </div>
+
+                </div>
+
+                <div class="row row-cols-md-1 align-items-center g-5 flex-xl-row-reverse pt-5">
+                    <div class="col-xl-6 col-lg-5 payments-content ">
+                        <h3 class="fw-medium">08</h3>
+                        <h4 class="fw-semibold py-2">Product research</h4>
+                        <p>Product market research is a key way to make sure your products and services are fit for launching in the market, and are performing as well as they can.
+                        </p>
+                        <p>The aim of this research is to see how your product is perceived by customers, if they are providing value and working correctly. Ideas can also be formed about upgrades and future product development.
+                        </p>
+
+                        <p>Primary research methods have a clear advantage in this kind of market research: Surveys can ask for rankings on the popularity or usefulness of features or conduct conjoint analysis, while in-person observation interviews (where the participant can handle a product) can be particularly useful in seeing what customers do with the product in real time.</p>
+
+                    </div>
+                    <div class="col-sm-8 col-lg-7 col-xl-6">
+                        <img src="{{ url_for('static', filename='images/product.jpg') }}"
+                            alt="Bootstrap Themes" class="d-block mx-lg-auto img-fluid" loading="lazy">
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    {% include 'template/footer.html' %}
+
+</body>
+
+</html>

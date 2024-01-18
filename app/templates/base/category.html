@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {% include 'template/assets.html' %}
+    <!-- CSS link -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {{ moment.include_moment() }}
+    <title>Adex</title>
+</head>
+
+<body>
+    <header class="overflow-hidden">
+        {% include 'template/header.html' %}
+    </header>
+
+    <main>
+        <section class="section-project pt-5 ">
+            <div class="px">
+              <div class="text-center">
+                <p class="fw-semibold section-title">{{ category.title }}</p>
+                <h3 class="section-content fw-semibold">Check out some of our awesome projects <br> with creative
+                  ideas and great design.</h3>
+              </div>
+                {% for project in projects %}
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 g-4 py-4">
+                <div class="col">
+                  <div class="card h-100 border-0">
+                    <img src="{{ url_for('static', filename='images/' + project.image) }}" class="card-img-top" alt="blog-1">
+                    <div class="card-body  px-4 py-5">
+                      <a href="{{ url_for('projects.project', project_id=project.id) }}" class="card-title fs-4 fw-semibold">{{ project.title }}</a>
+                      <p class="card-text feature-content py-3">{{ project.description }}</p>
+      
+                      <div class="d-flex gap-3 pb-2">
+                        <div class="d-flex align-items-center gap-1">
+                          <i class="las la-calendar fs-5"></i>
+                          <span>{{ moment(project.created_at).format('DD MMM YYYY') }}</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-1">
+                          <i class="las la-file-alt fs-5"></i>
+                          <span>{{ project.topic }}</span>
+                        </div>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+                </div>
+                  {% endfor %}
+            </div>
+            </div>
+          </section>
+        </main>
+        {% include 'template/footer.html' %}
+</body>
+
+</html>

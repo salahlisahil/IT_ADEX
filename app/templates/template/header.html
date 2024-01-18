@@ -1,0 +1,62 @@
+
+    <nav class="navbar navbar-dark navbar-expand-lg bg-transparent">
+      <div class="container-fluid px">
+
+        <img src="{{ url_for('static', filename='images/logo-light.svg') }}" alt="" onclick="window.location.href=`{{ url_for('base.index') }}`" class="main-logo">
+
+        <button class="navbar-toggler shadow-none border-0 " type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+
+          <div class="offcanvas-header text-white">
+            <h5 class="offcanvas-title fs-1 fw-semibold" id="offcanvasNavbarLabel">Adex</h5>
+            <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3  fw-semibold">
+              <li class="nav-item mx-2">
+                <a class="nav-link active" aria-current="page" href="{{ url_for('base.index') }}">Home</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-white" href="{{ url_for('base.index') }}#about">About</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-white" href="{{ url_for('base.index') }}#projects">Projects</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-white" href="{{ url_for('base.blog') }}">Blog</a>
+              </li>
+            </ul>
+            <button class="btn-nav fw-semibold rounded-pill px-4 py-2" type="submit" onclick="window.location.href=`{{ url_for('action.contact') }}`">Contact</button>
+
+          </div>
+          <div class="d-flex flex-column d-lg-none p-3">
+            <a href="mailto:info@email.com" class=" text-white">info@email.com</a>
+            <a href="tel:001234567890" class="contact-link text-white">00 (123) 456 78 90</a>
+            <div class="social-icon pt-3">
+              <a href="#" class="text-decoration-none">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="#" class="text-decoration-none">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="#" class="text-decoration-none">
+                <i class="fa-brands fa-dribbble"></i>
+              </a>
+              <a href="#" class="text-decoration-none">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" class="text-decoration-none">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>

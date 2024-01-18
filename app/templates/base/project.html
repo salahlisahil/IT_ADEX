@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'template/assets.html' %}
+    <!-- CSS link -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Adex</title>
+</head>
+<body>
+    <header class="overflow-hidden">
+        {% include 'template/header.html' %}
+    </header>
+    <main>
+      <section class="section-detail" id="about">
+        <div class="px py-5">
+          <div class="row flex-lg-row-reverse row-cols-md-2 flex-md-row-reverse align-items-center g-5">
+            <div class=" col-sm-8 col-lg-7">
+              <img src="{{ url_for('static', filename='images/' + project.image) }}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                width="800" height="550" loading="lazy">
+            </div>
+            <div class="col-lg-5">
+              <p class="fw-semibold section-title">{{ category.title }}</p>
+              <h3 class="pb-2 section-content fw-semibold">{{ project.title }}</h3>
+              <p class="feature-content lh-base">{{ project.description }}</p>
+  
+              <div class="d-flex gap-2 ">
+                  {% if project.github %}
+                <a href="{{ project.github }}" class="detail-icon1" target="_blank">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                  {% endif %}
+
+                  {% if project.behance %}
+                <a href="{{ project.behance }}" class="detail-icon2" target="_blank">
+                  <i class="fa-brands fa-figma"></i>
+                </a>
+                  {% endif %}
+              </div>
+    
+            </div>
+  
+  
+          </div>
+        </div>
+        </div>
+      </section>
+    </main>
+    
+     {% include 'template/footer.html' %}
+</body>
+</html>

@@ -1,0 +1,10 @@
+flask
+Flask-SQLAlchemy
+Flask-Admin
+Flask-WTF
+Flask-Migrate
+Flask-Moment
+Flask-Mail
+email-validator
+gunicorn
+psycopg2-binary

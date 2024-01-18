@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'template/assets.html' %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {{ moment.include_moment() }}
+    <title>Adex</title>
+</head>
+
+<body>
+    <header class="overflow-hidden">
+        {% include 'template/header.html' %}
+    </header>
+    <main>
+        <section class="section-comment">
+            <div class="px py-5">
+                <div>
+                    <h2 class="section-content fw-semibold">Our Story</h2>
+                </div>
+                <div class="row row-cols-md-2 align-items-center gap-5">
+                    <div class="col-xl-5 col-lg-12 col-md-12">
+                        <p class="feature-content lh-base">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, animi? Illum iusto optio necessitatibus laborum unde rem nostrum accusamus temporibus sint pariatur. Accusamus, aliquid fugiat odit quibusdam qui nemo non excepturi alias nisi praesentium nihil quaerat porro molestias provident deleniti recusandae ducimus quasi dolor ipsam impedit aliquam. Aut eius quisquam eligendi. Deleniti laudantium magnam temporibus repudiandae veritatis officia nihil non voluptate! Laboriosam possimus tempora nam rem. At eveniet sequi repudiandae unde nulla iste autem, tempora fuga rem repellendus amet facere ex deleniti qui quis asperiores corporis perspiciatis. Praesentium, tempore reiciendis unde numquam cupiditate consequuntur expedita quia quidem quasi reprehenderit aut? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, animi? Illum iusto optio necessitatibus laborum unde rem nostrum accusamus temporibus sint pariatur. Accusamus, aliquid fugiat odit quibusdam qui nemo non excepturi alias nisi praesentium nihil quaerat porro molestias provident deleniti recusandae ducimus quasi dolor ipsam impedit aliquam.</p>
+                    </div>
+                    <div class="col-xl-5 col-lg-12 col-md-12">
+                        <h4 class="section-content pb-5">Write a review</h4>
+                        <form action="{{ url_for('action.comment') }}" method="POST">
+                           {{ form.csrf_token }}
+                            <div class="mb-3">
+                                {{ form.fullname.label(class='form-label') }}
+                                {{ form.fullname }}
+                            </div>
+                            <div class="mb-3">
+                                {{ form.header.label(class='form-label') }}
+                                {{ form.header }}
+                            </div>
+                            <div class="mb-3">
+                                {{ form.message.label(class='form-label') }}
+                                {{ form.message }}
+                            </div>
+                            <button type="submit" class="border-0 rounded-pill fw-semibold button">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-xl-5 pt-5">
+                    <h4 class="pb-3">Comments</h4>
+                    {% for comment in comments %}
+                    <div class="border-bottom pb-3 mt-2">
+                        <div>
+                            <h5>{{ comment.fullname }}</h5>
+                            <h6>{{ comment.header }}</h6>
+                            <p class="feature-content lh-base">{{ comment.message }}</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <span>{{ moment(comment.created_at).format('DD MMM YYYY HH:mm') }}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    {% include 'template/message.html' %}
+    {% include 'template/footer.html' %}
+
+</body>
+
+</html>
